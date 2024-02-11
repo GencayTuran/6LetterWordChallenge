@@ -23,18 +23,22 @@ The solution must be stored in a git repo. After the repo is cloned, the applica
 Don't spend too much time on this.
 
 ## features and tasks
+
 1. input data processor
-- get input data
-- put data into collection
+  - get input data
+  - put data into collection
 
 2. data combinator service
-- iterate data over combination logic
-- logic: combine every 2 words that make up a word of 6 chars in total from the input data
-- (later make this logic able to handle different combinations as well.)
+  - iterate data over combination logic
+  - logic: combine every 2 words that make up a word of 6 chars in total from the input data
+  - (later make this logic able to handle different combinations as well.)
 
 3. combination presentator service
-- present end result for each combiantion as following example: fo+obar=foobar
+  - present end result for each combiantion as following example: fo+obar=foobar
 
 4. refactoring and principles implementation
+  - refactor and implement the SOLID principles
+  - make every service readable and testable
 
 5. unit testing
+  - create unit tests for every service
