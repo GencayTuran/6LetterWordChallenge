@@ -21,3 +21,20 @@ Treat this exercise as if you were writing production code; think unit tests, SO
 The solution must be stored in a git repo. After the repo is cloned, the application should be able to run with one command / script.
 
 Don't spend too much time on this.
+
+## features and tasks
+1. input data processor
+- get input data
+- put data into collection
+
+2. data combinator service
+- iterate data over combination logic
+- logic: combine every 2 words that make up a word of 6 chars in total from the input data
+- (later make this logic able to handle different combinations as well.)
+
+3. combination presentator service
+- present end result for each combiantion as following example: fo+obar=foobar
+
+4. refactoring and principles implementation
+
+5. unit testing
