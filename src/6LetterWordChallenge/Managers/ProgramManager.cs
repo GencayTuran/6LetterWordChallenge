@@ -46,6 +46,7 @@ namespace _6LetterWordChallenge.Managers
             }
             catch (Exception ex)
             {
+                Console.WriteLine("An unknown error occured:");
                 Console.WriteLine(ex.Message);
             }
 
