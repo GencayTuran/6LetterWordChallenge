@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,7 +18,12 @@ namespace _6LetterWordChallenge.Services
 
         public async Task<string[]> ReadDataFromFile(string filePath)
         {
-            return await File.ReadAllLinesAsync(filePath);
+            var data = await File.ReadAllLinesAsync(filePath);
+            if (!data.Any())
+            {
+                throw new ArgumentNullException($"No data found in file path {filePath}.");
+            }
+            return data;
         }
     }
 }

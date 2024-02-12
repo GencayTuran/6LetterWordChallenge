@@ -7,6 +7,5 @@ ICombinatorService datacombinatorService = new CombinatorService();
 IViewerService viewDataService = new ViewerService();
 
 ProgramManager programManager = new (sourceDataService, datacombinatorService, viewDataService);
-await programManager.Run();
 
-Console.ReadLine();
+await programManager.Run();

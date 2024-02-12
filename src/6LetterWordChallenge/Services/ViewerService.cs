@@ -12,6 +12,11 @@ namespace _6LetterWordChallenge.Services
     {
         public void ShowCombinations(IEnumerable<Combination> combinations)
         {
+            if (!combinations.Any())
+            {
+                throw new InvalidOperationException("No combinations were found.");
+            }
+
             foreach (var combination in combinations)
             {
                 var viewData = combination.Word1 + "+" + combination.Word2 + "=" + combination.Result;

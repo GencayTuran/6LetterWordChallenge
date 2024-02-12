@@ -26,11 +26,30 @@ namespace _6LetterWordChallenge.Managers
 
         public async Task Run()
         {
-            var filePath = _sourceData.GetFilePath();
-            var inputData = await _sourceData.ReadDataFromFile(filePath);
+            try
+            {
+                var filePath = _sourceData.GetFilePath();
+                var inputData = await _sourceData.ReadDataFromFile(filePath);
+                var combinations = _dataCombinator.CombineData(inputData);
 
-            var combinations = _dataCombinator.CombineData(inputData);
-            _viewData.ShowCombinations(combinations);
+                _viewData.ShowCombinations(combinations);
+
+            }
+            catch (ArgumentNullException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Check your file.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.ReadLine();
         }
     }
 }
