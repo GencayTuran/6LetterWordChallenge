@@ -11,18 +11,19 @@ var inputData = await File.ReadAllLinesAsync(filePath);
 #endregion
 
 //combine the data
-var combinedData = CombineData(inputData);
+var combinations = CombineData(inputData);
 
 #region ViewData
 //return collection
-foreach (var data in combinedData)
+foreach (var combination in combinations)
 {
-    Console.WriteLine(data);
+    var viewData = combination.Word1 + "+" + combination.Word2 + "=" + combination.Result;
+    Console.WriteLine(viewData);
 }
 Console.ReadLine();
 #endregion
 
-IEnumerable<string> CombineData(string[] inputData)
+IEnumerable<Combination> CombineData(string[] inputData)
 {
     var existingCombinations = inputData.Where(data => data.Length == 6).ToArray();
     var toBeCombinedWords = inputData.Where(data => data.Length < 6 && data.Length > 0).ToArray();
@@ -32,7 +33,14 @@ IEnumerable<string> CombineData(string[] inputData)
                         where word1 != word2
                         let combined = word1 + word2
                         where existingCombinations.Contains(combined, StringComparer.OrdinalIgnoreCase)
-                        select $"{word1}+{word2}={combined}";
+                        select new Combination {Word1 = word1, Word2 = word2, Result = combined};
 
     return combinedWords;
+}
+
+class Combination
+{
+    public string Word1 { get; set; }
+    public string Word2 { get; set; }
+    public string Result { get; set; }
 }
