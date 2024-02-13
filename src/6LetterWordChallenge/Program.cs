@@ -2,7 +2,8 @@
 using _6LetterWordChallenge.Services;
 using _6LetterWordChallenge.Services.Interfaces;
 
-ISourceDataService sourceDataService = new SourceDataService();
+IFileWrapper fileWrapper = new FileWrapper();
+ISourceDataService sourceDataService = new SourceDataService(fileWrapper);
 ICombinatorService datacombinatorService = new CombinatorService();
 IViewerService viewDataService = new ViewerService();
 

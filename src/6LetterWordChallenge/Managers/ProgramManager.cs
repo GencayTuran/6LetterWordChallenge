@@ -39,6 +39,10 @@ namespace _6LetterWordChallenge.Managers
             {
                 Console.WriteLine(ex.Message);
             }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             catch (InvalidOperationException ex)
             {
                 Console.WriteLine(ex.Message);
