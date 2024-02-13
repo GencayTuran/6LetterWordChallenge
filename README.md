@@ -30,7 +30,7 @@ Don't spend too much time on this.
 2. **Data Combinator Service**
    - Iterate data over combination logic.
      - Combine every 2 words that make up a word of 6 chars in total from the input data.
-     - (Later make this logic able to handle different combinations as well.)
+     - (Later make this logic able to handle different combinations or different source of input data as well.)
 
 3. **Combination Presentator Service**
    - Present end result for each combination.
