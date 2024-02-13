@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6LetterWordChallenge", "src\6LetterWordChallenge\6LetterWordChallenge.csproj", "{68E8ED17-739B-4D6F-ADE9-D47FA0822787}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6LetterWordChallenge", "src\6LetterWordChallenge\6LetterWordChallenge.csproj", "{68E8ED17-739B-4D6F-ADE9-D47FA0822787}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6LetterWordChallenge.Test", "src\6LetterWordChallenge.Test\6LetterWordChallenge.Test.csproj", "{2C436C9F-809B-4504-9773-35BEBA91D9E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{68E8ED17-739B-4D6F-ADE9-D47FA0822787}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68E8ED17-739B-4D6F-ADE9-D47FA0822787}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68E8ED17-739B-4D6F-ADE9-D47FA0822787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C436C9F-809B-4504-9773-35BEBA91D9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C436C9F-809B-4504-9773-35BEBA91D9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C436C9F-809B-4504-9773-35BEBA91D9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C436C9F-809B-4504-9773-35BEBA91D9E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
